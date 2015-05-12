@@ -1,6 +1,6 @@
 # web2py-haystack-module
 
-La clase haystack basada en el plugin_haystack permite el accesos y manipulación de datos de Solr. Para sincronizar datos de la BBDD local con Solr, es tan simple como:
+La clase haystack basada en el plugin_haystack permite el acceso y manipulación de datos de Solr. Para sincronizar datos de la BBDD local con Solr, es tan simple como:
 ```
 index = Haystack(db.auth_user, core="psycomy")
 index.indexes('first_name', 'last_name')
@@ -14,9 +14,9 @@ json = index.search(compact=False, first_name='Ca*', last_name='*Gar')
 ```
 
 Opciones:
-* limit=20: Limite de los resultados devueltos.
+* limit=20: Límite de los resultados devueltos.
 * mode='AND' : Forma de combinar los campos para la búsqueda. Puede ser AND or OR.
-* compact=True: Si es True, devuelve los IDs de los campos encontrados para posteriormente extrae la información de la BBDD. En el caso de False devuelve el JSON de la repuesta de Solr.
+* compact=True: Si es True, devuelve los IDs de los campos encontrados para posteriormente extraer la información de la BBDD. En el caso de False devuelve el JSON de la repuesta de Solr.
 * sort='id asc': Campo por el que se quiere ordenar. Puede ser asc o desc.
 
 En el caso de usar compact True. El acceso a la BBDD se puede hacer de la siguiente manera:
@@ -39,7 +39,7 @@ index = Haystack(core="psycomy")
 index.update(query, fields, self.db, **core_fields)
 ```
 
-Lo de arriba, realizara la consulta query sobre la BBDD, seleccionara los campos: fields y cada campo los introducirá en Solr mapeandolos según core_fields
+Lo de arriba, realizará la consulta query sobre la BBDD, seleccionará los campos: fields y cada campo los introducirá en Solr mapeándolos según core_fields
 
 ## Paginar con Solr
 Para paginar en Solr es tan simple como hacer un return de:
