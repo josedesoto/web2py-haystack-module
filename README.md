@@ -50,4 +50,4 @@ return paginate_solr(request.args, request.vars, self.MAXITEMS, json)
 
 Donde json es el resultado de tu búsqueda son search. La salida sería:
 
-![Alt text](solr_json.pbg?raw=true "Solr json return")
+![Alt text](./solr_json.pbg?raw=true "Solr json return")
